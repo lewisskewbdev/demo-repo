@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Creations — Demo Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Demo Portfolio</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="creations.html">Creations</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>My Creations</h2>
+      <p>Below are sample items — replace these with your real projects, posts, or media.</p>
+
+      <div class="grid">
+        <article id="alpha" class="card">
+          <h3>Project Alpha</h3>
+          <p>Category: Web demo</p>
+          <p>A short blurb about Project Alpha. Link to a live demo, repo, or media here.</p>
+          <p><a href="#" class="btn">View project</a></p>
+        </article>
+
+        <article id="beta" class="card">
+          <h3>Project Beta</h3>
+          <p>Category: Writing</p>
+          <p>Short excerpt or summary. Link out to full content or PDF.</p>
+          <p><a href="#" class="btn">Read more</a></p>
+        </article>
+
+        <article id="gamma" class="card">
+          <h3>Project Gamma</h3>
+          <p>Category: Design</p>
+          <p>Short description and images can be added here to showcase visual work.</p>
+          <p><a href="#" class="btn">See gallery</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Lewis — Demo Portfolio</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
