@@ -1,132 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Site</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #333;
-        }
-        
-        .container {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            padding: 40px;
-            max-width: 600px;
-            text-align: center;
-        }
-        
-        h1 {
-            color: #667eea;
-            margin-bottom: 20px;
-            font-size: 2.5em;
-        }
-        
-        p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            font-size: 1.1em;
-        }
-        
-        .button-group {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        button {
-            background: #667eea;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background 0.3s ease;
-        }
-        
-        button:hover {
-            background: #764ba2;
-        }
-        
-        #output {
-            margin-top: 30px;
-            padding: 20px;
-            background: #f5f5f5;
-            border-radius: 5px;
-            min-height: 60px;
-            color: #333;
-        }
-        
-        .counter {
-            font-size: 2em;
-            font-weight: bold;
-            color: #667eea;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Demo Portfolio — Home</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <header class="site-header">
     <div class="container">
-        <h1>Welcome! 👋</h1>
-        <p>This is a basic website hosted on GitHub Pages. Click the buttons below to interact with this page.</p>
-        
-        <div class="button-group">
-            <button onclick="greet()">Say Hello</button>
-            <button onclick="increment()">Click Me!</button>
-            <button onclick="resetCounter()">Reset</button>
-        </div>
-        
-        <div id="output">
-            <p>Click a button to see something happen!</p>
-        </div>
+      <h1 class="logo">Demo Portfolio</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="creations.html">Creations</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <script>
-        let counter = 0;
+  <main class="container">
+    <section class="hero">
+      <h2>Hello — I'm Lewis</h2>
+      <p>Welcome to a small demo portfolio showcasing content I've created and ways to get in touch.</p>
+      <p><a class="btn" href="creations.html">See my work</a> <a class="btn ghost" href="contact.html">Contact me</a></p>
+    </section>
 
-        function greet() {
-            const now = new Date();
-            const hour = now.getHours();
-            let greeting;
+    <section class="about">
+      <h3>About this demo</h3>
+      <p>This simple static site demonstrates a portfolio with a home page, a page for created content, and a contact page. Replace the sample items with your real projects and details.</p>
+    </section>
 
-            if (hour < 12) {
-                greeting = 'Good morning! ☀️';
-            } else if (hour < 18) {
-                greeting = 'Good afternoon! 🌤️';
-            } else {
-                greeting = 'Good evening! 🌙';
-            }
+    <section class="featured">
+      <h3>Featured</h3>
+      <div class="grid">
+        <article class="card">
+          <h4>Project Alpha</h4>
+          <p>Short description of a featured project. Add links and images as needed.</p>
+          <p><a href="creations.html#alpha">Read more →</a></p>
+        </article>
+        <article class="card">
+          <h4>Project Beta</h4>
+          <p>Another item demonstrating how project cards will look on the site.</p>
+          <p><a href="creations.html#beta">Read more →</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
 
-            document.getElementById('output').innerHTML = `<p>${greeting}</p>`;
-        }
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Lewis — Demo Portfolio</p>
+    </div>
+  </footer>
 
-        function increment() {
-            counter++;
-            document.getElementById('output').innerHTML = 
-                `<p>You clicked the button <span class="counter">${counter}</span> times!</p>`;
-        }
-
-        function resetCounter() {
-            counter = 0;
-            document.getElementById('output').innerHTML = 
-                `<p>Counter reset! Click Me! to start again.</p>`;
-        }
-    </script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
